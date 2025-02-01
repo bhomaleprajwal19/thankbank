@@ -4,10 +4,10 @@ import { fetchuser } from "@/actions/useractions";
 import Link from "next/link";
 
 export default function SearchBar() {
-    const [username, setusername] = useState("");
+    const [username, setUsername] = useState("");
     const [loading, setLoading] = useState(false);
     const [creator, setCreator] = useState(null);
-    const [creatorname, setcreatorname] = useState(null);
+    const [creatorName, setCreatorName] = useState(null);
 
     const handleSearch = async () => {
         if (!username.trim()) return;
@@ -19,7 +19,7 @@ export default function SearchBar() {
 
             if (res?.username) {
                 setCreator(res.username);
-                setcreatorname(res.name);
+                setCreatorName(res.name);
             } else {
                 alert("User not found");
             }
@@ -39,15 +39,14 @@ export default function SearchBar() {
                     type="text"
                     placeholder="Search Username"
                     value={username}
-                    onChange={(e) => setusername(e.target.value)}
+                    onChange={(e) => setUsername(e.target.value)}
                 />
                 
                 <div
                     className="bg-gray-500 p-2 rounded-3xl px-5 hover:bg-gray-700 hover:font-semibold"
                     onClick={handleSearch}
                 > 
-
-                Search
+                    Search
                 </div>
                 {loading && <p>Loading...</p>}
             </div>
@@ -59,7 +58,7 @@ export default function SearchBar() {
                         </div>
 
                         <div className="name mt-4 pt-1 px-5 bg-gray-700 rounded-xl h-10 text-white">
-                            User's name: {creatorname}
+                            User&apos;s name: {creatorName}
                         </div>
                         
                         <Link href={`/${creator}`}>

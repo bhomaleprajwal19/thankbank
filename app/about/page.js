@@ -1,24 +1,42 @@
 import React from 'react';
+import Image from 'next/image';
+
+export const metadata = {
+    title: "About - ThankBank",
+};
 
 const About = () => {
     return (
         <div className="container mx-auto px-8 md:px-4 py-8 text-white">
             <h1 className="text-3xl font-semibold mb-4">About ThankBank</h1>
             <p className="text-lg mb-6">
-                ThankBank is a platform that connects creators with their fans to bring creative projects to life. By directly contributing, fans help fund projects and become a part of the creative journey.
+                ThankBank is a platform that connects creators with their fans to bring creative projects to life. 
+                By directly contributing, fans help fund projects and become a part of the creative journey.
             </p>
 
             <h2 className="text-2xl font-semibold mb-4">How It Works</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="flex items-center mb-6">
-                    <img className="w-20 h-20 rounded-full mr-4" src="/group.gif" alt="Fans Collaborating" />
+                    <Image 
+                        src="/group.gif" 
+                        alt="Fans Collaborating" 
+                        width={80} 
+                        height={80} 
+                        className="rounded-full mr-4" 
+                    />
                     <div>
                         <h3 className="text-xl font-semibold mb-2">Fans Empower Creators</h3>
                         <p>Creators can receive support from their community, enabling them to fund and bring their ideas to life.</p>
                     </div>
                 </div>
                 <div className="flex items-center mb-6">
-                    <img className="w-20 h-20 rounded-full mr-4" src="/coin.gif" alt="Support Creators" />
+                    <Image 
+                        src="/coin.gif" 
+                        alt="Support Creators" 
+                        width={80} 
+                        height={80} 
+                        className="rounded-full mr-4" 
+                    />
                     <div>
                         <h3 className="text-xl font-semibold mb-2">Contribute to Projects</h3>
                         <p>Fans support creators by directly contributing to projects, helping bring new ideas and creative works to reality.</p>
@@ -55,10 +73,6 @@ const About = () => {
             </ul>
         </div>
     );
-}
+};
 
 export default About;
-
-export const metadata = {
-    title: "About - ThankBank",
-}

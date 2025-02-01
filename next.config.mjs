@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    images: {
+      domains: ['media.tenor.com'], // Add the external domain here
+    },
+  };
+  
+  export default nextConfig;
+  
