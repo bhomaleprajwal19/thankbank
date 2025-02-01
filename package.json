@@ -1,5 +1,5 @@
 {
-  "name": "get-me-a-chai",
+  "name": "thankbank",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.0",
+    "axios": "^1.7.9",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^12.0.6",
+    "mongoose": "^8.9.5",
+    "next": "^15.1.4",
+    "next-auth": "^4.24.11",
+    "razorpay": "^2.9.5",
+    "react": "^18.3.1",
     "react-dom": "^18",
-    "next": "14.1.3"
+    "react-icons": "^5.4.0",
+    "react-toastify": "^11.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.3"
+    "eslint-config-next": "14.1.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }
